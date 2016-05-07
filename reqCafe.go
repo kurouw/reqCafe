@@ -1,4 +1,4 @@
-pspackage reqCafe
+package reqCafe
 
 import (
 	"encoding/json"
