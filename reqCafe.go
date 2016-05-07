@@ -30,7 +30,7 @@ type TDataset struct {
 
 func RtCafeInfo(calltime time.Time,dir string)[]string{
 	fg := 0
-	file, err := ioutil.ReadFile(string+"/config.json")
+	file, err := ioutil.ReadFile(dir+"/config.json")
 	var datasets []Dataset
 	json_err := json.Unmarshal(file, &datasets)
 	if err != nil{
