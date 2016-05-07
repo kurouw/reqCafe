@@ -60,7 +60,7 @@ func RtCafeInfo(calltime time.Time)[]string{
 
 func RtTnCafeInfo(calltime time.Time)[]string{
 	fg := 0
-	file, err := ioutil.ReadFile("ta.json")
+	file, err := ioutil.ReadFile("tandai2.json")
 	var datasets []TDataset
 	json_err := json.Unmarshal(file, &datasets)
 	if err != nil{
