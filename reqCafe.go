@@ -28,9 +28,9 @@ type TDataset struct {
 	Salad string `json:"salad"`
 }
 
-func RtCafeInfo(calltime time.Time)[]string{
+func RtCafeInfo(calltime time.Time,dir string)[]string{
 	fg := 0
-	file, err := ioutil.ReadFile("json/config.json")
+	file, err := ioutil.ReadFile(string+"/config.json")
 	var datasets []Dataset
 	json_err := json.Unmarshal(file, &datasets)
 	if err != nil{
@@ -58,9 +58,9 @@ func RtCafeInfo(calltime time.Time)[]string{
 }
 
 
-func RtTnCafeInfo(calltime time.Time)[]string{
+func RtTnCafeInfo(calltime time.Time,dir string)[]string{
 	fg := 0
-	file, err := ioutil.ReadFile("json/tandai2.json")
+	file, err := ioutil.ReadFile(dir+"tandai2.json")
 	var datasets []TDataset
 	json_err := json.Unmarshal(file, &datasets)
 	if err != nil{
